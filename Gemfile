@@ -31,7 +31,7 @@ gem 'jquery-rails'
 # Sempre inclua
 gem 'materialize-sass'
 gem 'material_icons'
-
+gem 'bootstrap-sass', '3.4.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
