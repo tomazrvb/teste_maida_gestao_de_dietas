@@ -1,2 +1,35 @@
-<h1>InitPages#new_acount</h1>
-<p>Find me in app/views/init_pages/new_acount.html.erb</p>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Nova Conta</title>
+	</head>
+
+	<body>
+		<div class="wrapper fadeInDown">
+		<div id="formContent">
+			<!-- Tabs Titles -->
+
+			<!-- Icon -->
+			<div class="fadeIn first">
+			<%=  image_tag("images.png", alt: "Rails logo", width: "200") %>
+			</div>
+
+			<!-- Login Form -->
+			<form>
+            <input type="text" id="name" class="fadeIn second" name="name" placeholder="name">
+        	<input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+			<input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+			<input type="submit" class="fadeIn fourth" value="Log In">
+			</form>
+
+			<!-- Remind Passowrd -->
+			<div id="formFooter">
+			<a class="underlineHover" href="#">Registre-se</a>
+			</div>
+
+		</div>
+		</div>
+	</body>
+
+</html>
