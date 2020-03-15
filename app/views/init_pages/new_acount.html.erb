@@ -12,20 +12,21 @@
 
 			<!-- Icon -->
 			<div class="fadeIn first">
-			<%=  image_tag("images.png", alt: "Rails logo", width: "200") %>
+			<%=  image_tag("images.png", alt: "Logo do sistema", width: "200") %>
 			</div>
 
-			<!-- Login Form -->
-			<form>
-            <input type="text" id="name" class="fadeIn second" name="name" placeholder="name">
-        	<input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-			<input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-			<input type="submit" class="fadeIn fourth" value="Log In">
-			</form>
+			<!-- Sing in Form -->
 
+			<%= form_with(model: @user, local: true) do |f| %>
+				<%=f.text_field :name , class: "fadeIn second",  placeholder: "Nome"%>
+				<%=f.text_field :email , class: "fadeIn second",  placeholder: "Email"%>
+				<%=f.password_field :password , class: "fadeIn third",  placeholder: "Senha"%>
+				<%=f.password_field :password_confirmation , class: "fadeIn third",  placeholder: "Confirmação da Senha"%>
+				<%= f.submit "Registar se", class: "fadeIn fourth" %>
+			<% end %>
 			<!-- Remind Passowrd -->
 			<div id="formFooter">
-			<a class="underlineHover" href="#">Registre-se</a>
+				<a class="underlineHover" href="#">Voltar a Pagina Inicial</a>
 			</div>
 
 		</div>
