@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Teste Infoway</title>
+    <meta charset="utf-8">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+    </script>
+    <![endif]-->
+    </head>
+    <body>
+        <header class="navbar-default navbar navbar-fixed-top navbar-inverse">
+            <%= link_to "Gestão de Dietas Maida Teste", '#', id: "logo" %>
+            <nav>
+                <ul class="nav justify-content-end my-2 my-lg-0 ">
+                    <li class="nav-item"><%= link_to "Log in", '#' %></li>
+                </ul>
+            </nav>
+        </header>
+            <div class="container">
+            <div class="center jumbotron">
+                <h1>Bem vindo ao Sistema de Gestão de Dietas Maida Teste</h1>
+                <h2>
+                    <p>
+                        Esse sistema tem como objetivo responder ao desafio prático para preenchimento do cargo de Desenvolvedor Back End Ruby on Rails na Maida.Health. Esse desafio consiste no desenvolvimento de uma solução web para gestão de dietas e monitoramento de peso.
+                    </p>
+                    <p>
+                        Aproveite e teste essa ferramenta fazendo um cadastro no botão abaixo ou faça login e aproveite gratuitamente a ferramenta.
+                    </p>
+                </h2>
+                <p class="lead">
+                    <%= link_to "Registre-se", '#', class: "btn btn-lg btn-primary" %>
+                </p>
+            </div>
+        </div>
+    </body>
+</html

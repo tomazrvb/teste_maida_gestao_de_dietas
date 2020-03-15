@@ -4,4 +4,7 @@ class InitPagesController < ApplicationController
 
   def new_acount
   end
+  
+  def index
+  end
 end
