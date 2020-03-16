@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Nova Conta</title>
+	</head>
+
+	<body>
+		<div class="wrapper fadeInDown">
+		<div id="formContent">
+			<!-- Tabs Titles -->
+
+			<!-- Icon -->
+			<div class="fadeIn first">
+			<%=  image_tag("images.png", alt: "Logo do sistema", width: "200") %>
+			</div>
+
+			<!-- Sing in Form -->
+
+			<%= form_with(model: @user, local: true) do |f| %>
+                <%= render 'shared/error_messages' %>
+				<%=f.text_field :name , class: "fadeIn second",  placeholder: "Nome"%>
+				<%=f.text_field :email , class: "fadeIn second",  placeholder: "Email"%>
+				<%=f.password_field :password , class: "fadeIn third",  placeholder: "Senha"%>
+				<%=f.password_field :password_confirmation , class: "fadeIn third",  placeholder: "Confirmação da Senha"%>
+				<%= f.submit "Registar se", class: "fadeIn fourth" %>
+			<% end %>
+			<!-- Remind Passowrd -->
+			<div id="formFooter">
+				<a class="underlineHover" href="#">Voltar a Pagina Inicial</a>
+			</div>
+
+		</div>
+		</div>
+	</body>
+
+</html>
