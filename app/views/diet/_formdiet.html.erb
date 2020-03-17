@@ -1,0 +1,24 @@
+<%= form_with(url: diet_index_path, scope: :diet, local: true) do |f| %>
+    <div class="row ">
+        <div class="col-sm-4">
+            <%= f.label :start_date, "Data de Inicio" %><%=f.date_field :start_date %>
+        </div>
+        <div class="col-sm-6">
+            <%= f.label :start_date, "Data de Fim" %><%=f.date_field :end_date %>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-sm-2">
+            <%= f.label :starting_weight, "Peso" %><%=f.text_field :starting_weight %>
+        </div>
+        <div class="col-sm-2">
+            <%= f.label :height, "Altura" %><%=f.text_field :height %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-2">
+            <%= f.label :ideal_weight, "Peso Ideal" %><%=f.text_field :ideal_weight %>
+        </div>
+        <%= f.submit "Salvar", class: "fadeIn first" %>
+    </div>
+<% end %>

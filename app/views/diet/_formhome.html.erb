@@ -1,16 +1,16 @@
- <%= form_with(url: "#", scope: :meal, local: true) do |f| %>
-    <div class="row ">
-        <div class="col-sm-6">
-            <%= f.label :start_date, "Refeição" %><%= f.select(:type,options_for_select(@meals_list_type)) %>
-        </div>
-        <div class="col-sm-6">
-            <%= f.label :start_date, "Horario" %><%=f.time_field :end_date %>
+ <%= form_with(url: meals_path, scope: :meal, local: true) do |f| %>
+        <div class="row ">
+            <div class="col-sm-6">
+                <%= f.label :type, "Refeição" %><%= f.select(:type,options_for_select(@meals_list_type)) %>
+            </div>
+            <div class="col-sm-6">
+                <%= f.label :schedule, "Horario" %><%=f.time_field :schedule %>
+            </div>
         </div>
         <div class="row">
-        <div class="col-sm-8">
-            <%= f.label :start_date, "Descrição" %><%=f.text_area :start_date %>
+            <div class="col-sm-8">
+                <%= f.label :description, "Descrição" %><%=f.text_area :description %>
+            </div>
+                <%= f.submit "Adicionar", class: "fadeIn first" %>
         </div>
-            <%= f.submit "Adicionar", class: "fadeIn first" %>
-        </div>
-    </div>
 <% end %>
