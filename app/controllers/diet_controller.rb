@@ -8,7 +8,7 @@ class DietController < ApplicationController
             if  @diet.blank?
                 @meal = nil
             else
-                @meal = Meal.find_by( diet_id:  @diet.id)
+                @meal = Meal.where( diet_id:  @diet.id).order(:schedule)
             end 
         else
             redirect_to root_url
