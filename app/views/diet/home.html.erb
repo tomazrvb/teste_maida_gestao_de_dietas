@@ -46,26 +46,28 @@
                         </div>
 
                          <div class="card">  
-                            <div class="card-header">
-                                Dieta
-                            </div>
-                            <%= form_with(url: "#", scope: :meal, local: true) do |f| %>
-                                <div class="row ">
-                                    <div class="col-sm-6">
-                                        <%= f.label :start_date, "Refeição" %><%= f.select(:type,options_for_select(@meals_list_type)) %>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <%= f.label :start_date, "Horario" %><%=f.time_field :end_date %>
-                                    </div>
-                                    <div class="row">
-                                    <div class="col-sm-8">
-                                        <%= f.label :start_date, "Descrição" %><%=f.text_area :start_date %>
-                                    </div>
-                                        <%= f.submit "Adicionar", class: "fadeIn first" %>
-                                    </div>
+                            <% if @diet.blank? %>
+                                <div class="card-header">
+                                    Dieta (Cadastre primeiro Dados Gerais para liberar o formulário de refeições!)
                                 </div>
+                                <%= render 'formblock' %>
+                            <% else %>
+                                <div class="card-header">
+                                    Dieta
+                                </div>
+                                <%= render 'formblock' %>
                             <% end %>
                         </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                    Refeição
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">Nenhuma refeição cadastrada!</p>
+                            </div>
+                        </div>
+                   
                     </div>
                 </div>
             </div>

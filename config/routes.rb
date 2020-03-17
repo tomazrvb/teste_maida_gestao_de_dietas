@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'init_pages#index'
   get 'login' , to: 'init_pages#new'
   post 'login', to: 'init_pages#login'
-  delete '/logout',to: 'init_pages#destroy'
+  get '/logout',to: 'init_pages#destroy'
   get '/home', to: 'diet#home'
   resources :users
 
