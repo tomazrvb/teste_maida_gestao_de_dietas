@@ -22,6 +22,11 @@ class MealsController < ApplicationController
       redirect_to home_path
     end
   end
+  def destroy
+    @meal = Meal.find_by(id: params[:id])
+    @meal.destroy
+    redirect_to home_path
+  end
 
 end
 

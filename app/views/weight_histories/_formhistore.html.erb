@@ -1,0 +1,13 @@
+ <%= form_with(url: weight_histories_path, scope: :hist, local: true) do |f| %>
+        <div class="row">
+            <div class="col-sm-4">
+                <%= f.label :weighing_date, "Data de Pesagem:" %><%=f.date_field :weighing_date %>
+            </div>
+            <div class="col-sm-4">
+                <%= f.label :weight, "Peso:" %><%=f.text_field :weight %>
+            </div>
+            <div class="col-sm-4">
+                <%= f.submit "Adicionar", class: "fadeIn first" %>
+            </div>
+        </div>
+<% end %>

@@ -31,4 +31,12 @@ class DietController < ApplicationController
             render '/home'
         end
     end
+
+    def destroy
+        @diet = Diet.find_by(id: params[:id])
+        @diet.destroy
+        redirect_to home_path
+      end
+    
+
 end
