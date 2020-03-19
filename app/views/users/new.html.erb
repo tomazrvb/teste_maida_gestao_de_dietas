@@ -14,11 +14,13 @@
 			<div class="fadeIn first">
 			<%=  image_tag("images.png", alt: "Logo do sistema", width: "200") %>
 			</div>
-
+			
+			<% flash.each do |message_type, message| %>
+				<div class="alert alert-<%= message_type %>"><%= message %></div>
+			<% end %>
 			<!-- Sing in Form -->
 
 			<%= form_with(model: @user, local: true) do |f| %>
-                <%= render 'shared/error_messages' %>
 				<%=f.text_field :name , class: "fadeIn second",  placeholder: "Nome"%>
 				<%=f.text_field :email , class: "fadeIn second",  placeholder: "Email"%>
 				<%=f.password_field :password , class: "fadeIn third",  placeholder: "Senha"%>
