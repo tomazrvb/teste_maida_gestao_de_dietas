@@ -9,6 +9,8 @@ RSpec.describe "InitPages", type: :request do
             get root_path
             expect(response).to be_successful
         end
+    end
+    describe "POST #index" do
         it "returns a success response get login" do
             get login_path
             expect(response).to be_successful
