@@ -15,7 +15,7 @@
     </div>
   <% if  @weightHistory.blank?%>
   <div class="container"> 
-    <h2> Nada Cadastrado</h2>
+    <h2> Nenhum Historico de Peso Cadastrado Cadastrado</h2>
   </div>
   <%else%>
     <div class="container"> 
@@ -24,10 +24,10 @@
         ] %>
         ​
         <% options = {
-        title: 'Users Growth',
-        subtitle: 'Grouped Per Week',
-        xtitle: 'Week',
-        ytitle: 'Users',
+        title: 'Grafico de Evolução do usuario',
+        subtitle: 'Peso/Data de Pesagem',
+        xtitle: 'Data',
+        ytitle: 'Peso',
         stacked: true
         } %>
 ​

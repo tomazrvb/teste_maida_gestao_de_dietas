@@ -3,7 +3,7 @@
         <div class="col-sm-4">
             <%= f.label :start_date, "Data de Inicio" %><%=f.date_field :start_date %>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <%= f.label :start_date, "Data de Fim" %><%=f.date_field :end_date %>
         </div>
     </div>
@@ -19,6 +19,8 @@
         <div class="col-sm-2">
             <%= f.label :ideal_weight, "Peso Ideal" %><%=f.text_field :ideal_weight %>
         </div>
-        <%= f.submit "Salvar", class: "fadeIn first" %>
+        <div class="col-sm-4">
+            <%= f.submit "Salvar", class: "fadeIn first" %>
+        </div>
     </div>
 <% end %>

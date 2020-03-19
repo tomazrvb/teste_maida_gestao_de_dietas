@@ -1,10 +1,10 @@
 <div class="row ">
     <%= link_to 'X',diet_path(@diet), method: :delete, data: { confirm: 'Deseja excluir essa Dieta?' } %>
     <div class="col-sm-6">
-        <h2>Data de Inicio:</h2><h2><%=  @diet.start_date %></h2>
+        <h2>Data de Inicio:</h2><h2><%= date_brazilian_formates(@diet.start_date) %></h2>
     </div>
      <div class="col-sm-6">
-        <h2>Data de Fim:</h2><h2><%=  @diet.end_date %></h2>
+        <h2>Data de Fim:</h2><h2><%= date_brazilian_formates(@diet.end_date) %></h2>
     </div>
 </div>
 <div class="row ">
