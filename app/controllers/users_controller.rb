@@ -9,7 +9,7 @@ class UsersController < ApplicationController
             log_in @user
             redirect_to home_path
         else 
-            flash.now[:danger] = 'Dados incompletos ou faltantes, Por favor informar todos os dados Corretamete!(Imagem Opicional)'
+            flash.now[:danger] = 'Dados incompletos ou faltantes, Por favor informar todos os dados Corretamete!'
             render action: :new
         end
     end

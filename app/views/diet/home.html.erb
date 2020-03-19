@@ -6,6 +6,9 @@
 	</head>
     <body>
     <div class="container">
+        <h1>Bem Vindo <%= @user.name%>! </h1>
+    </div>
+    <div class="container">
             <h2 class="col-sm-8 d-inline-flex p-2">
              <%= link_to "Dashboard",weight_histories_dash_path%> | <a href="#">Dieta</a> |	<%= link_to "Sair", '/logout' %>
             </h2>
