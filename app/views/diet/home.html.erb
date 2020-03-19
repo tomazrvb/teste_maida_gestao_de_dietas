@@ -7,7 +7,7 @@
     <body>
     <div class="container">
             <h2 class="col-sm-8 d-inline-flex p-2">
-             <%= link_to "Dashboard",weight_histories_dash_path%> | <a href="#">Dieta</a>|	<%= link_to "Sair", '/logout' %>
+             <%= link_to "Dashboard",weight_histories_dash_path%> | <a href="#">Dieta</a> |	<%= link_to "Sair", '/logout' %>
             </h2>
             <%=  image_tag("images.png", class: "rounded float-right",alt: "Rails logo", width: "100") %>
     </div>
@@ -60,7 +60,7 @@
                             <% else %>
                                 <% @meal.each do |card|%>
                                  <div class="card-body">
-                                    <h3 class="card-title"><%= card.meal_type %> | Horario:<%= time_brazilian_formates(card.schedule) %>|<%= link_to 'X',meal_path(card), method: :delete, title: "Excluir Refeição",data: { confirm: 'Deseja excluir essa Refeição?' } %></td> </h3>
+                                    <h3 class="card-title"><%= card.meal_type %> | Horario:<%= time_brazilian_formates(card.schedule) %> | <%= link_to 'X',meal_path(card), method: :delete, title: "Excluir Refeição",data: { confirm: 'Deseja excluir essa Refeição?' } %></td> </h3>
                                     <p class="card-text"><%= card.description %></p>
                                 </div>
                                 <%end%>

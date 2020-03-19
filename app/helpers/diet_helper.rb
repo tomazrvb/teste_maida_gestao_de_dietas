@@ -9,7 +9,8 @@ module DietHelper
     end
     def time_brazilian_formates(time)
         time = time.to_s.split(' ')
-        formated_time = time[1]
-        return formated_time
+        formated_time = time[1].split(':')
+        formated_time.delete(formated_time.last)
+        return formated_time.join(':')
     end
 end

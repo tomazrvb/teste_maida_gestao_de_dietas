@@ -36,6 +36,9 @@
   <% end%>
     <div class="container"> 
                 <div class="center jumbotron">
+                  <% if notice.present?%>
+                    <div class="alert alert-danger "><h3><%= notice%></h3></div>
+                  <%end%>
                     <%= render 'formhistore' %>
                 </div>
       </div>

@@ -28,7 +28,7 @@ class DietController < ApplicationController
         if @diet.save
             redirect_to home_path
         else 
-            render '/home'
+            redirect_to home_path, notice: 'Dados incompletos ou faltantes. Por favor informar todos os dados Corretamete!'
         end
     end
 

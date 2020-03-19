@@ -1,6 +1,3 @@
-<% flash.each do |message_type, message| %>
-				<div class="alert alert-<%= message_type %>"><%= message %></div>
-<% end %>
 <div class="row ">
     <div class="col-sm-5 justify-content-end">
         <h3>Data de Inicio:</h3><h3><%= date_brazilian_formates(@diet.start_date) %></h3>
