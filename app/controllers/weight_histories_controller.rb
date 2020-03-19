@@ -22,7 +22,8 @@ class WeightHistoriesController < ApplicationController
     )
     if @hist.save
       redirect_to weight_histories_dash_path
-    else 
+    else
+      flash.now[:danger] = 'Dados incompletos ou faltantes, Por favor informar todos os dados Corretamete!(Imagem Opicional)'
       redirect_to weight_histories_dash_path
     end
   end

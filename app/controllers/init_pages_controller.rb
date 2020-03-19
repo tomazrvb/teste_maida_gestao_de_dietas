@@ -10,7 +10,7 @@ class InitPagesController < ApplicationController
       log_in user
       redirect_to home_path
     else
-      flash.now[:danger] = 'Email e/ou senha invalida'
+      flash.now[:danger] = 'Email e/ou senha invalidos'
       render 'login'
     end
   end

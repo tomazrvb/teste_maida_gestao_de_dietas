@@ -31,7 +31,7 @@
         stacked: true
         } %>
 ​
-        <%= line_chart(series, options) %>
+        <%= area_chart(series, options) %>
     </div>
   <% end%>
     <div class="container"> 
@@ -53,7 +53,7 @@
               <% !@weightHistory.each do |h|%>
                 <tr>
                   <td><%= h.weight %></td>
-                  <td><%= h.weighing_date %></td>
+                  <td><%= date_brazilian_formates(h.weighing_date) %></td>
                   <td><%= link_to 'X',weight_history_path(h), method: :delete, data: { confirm: 'Deseja excluir esse HISTÓRICO?' } %></td>
                 </tr>
               <%end%>

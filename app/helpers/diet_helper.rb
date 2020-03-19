@@ -10,6 +10,6 @@ module DietHelper
     def time_brazilian_formates(time)
         time = time.to_s.split(' ')
         formated_time = time[1]
-        return formated_list
+        return formated_time
     end
 end

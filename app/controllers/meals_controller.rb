@@ -18,7 +18,8 @@ class MealsController < ApplicationController
     )
     if @meal.save
       redirect_to home_path
-    else 
+    else
+      flash.now[:danger] = 'Dados incompletos ou faltantes, Por favor informar todos os dados Corretamete!'
       redirect_to home_path
     end
   end

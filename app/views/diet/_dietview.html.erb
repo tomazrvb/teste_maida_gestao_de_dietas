@@ -1,22 +1,24 @@
 <div class="row ">
-    <%= link_to 'X',diet_path(@diet), method: :delete, data: { confirm: 'Deseja excluir essa Dieta?' } %>
-    <div class="col-sm-6">
-        <h2>Data de Inicio:</h2><h2><%= date_brazilian_formates(@diet.start_date) %></h2>
+    <div class="col-sm-5 justify-content-end">
+        <h3>Data de Inicio:</h3><h3><%= date_brazilian_formates(@diet.start_date) %></h3>
     </div>
-     <div class="col-sm-6">
-        <h2>Data de Fim:</h2><h2><%= date_brazilian_formates(@diet.end_date) %></h2>
+     <div class="col-sm-5">
+        <h3>Data de Fim:</h3><h3><%= date_brazilian_formates(@diet.end_date) %></h3>
     </div>
-</div>
-<div class="row ">
-    <div class="col-sm-6">
-        <h2>Peso:</h2><h2><%=  @diet.starting_weight %></h2>
-    </div>
-     <div class="col-sm-6">
-        <h2>Altura:</h2><h2><%=  @diet.height %></h2>
+    <div class="col-sm-2">
+       <h1> <%= link_to 'X',diet_path(@diet), method: :delete, title: "Excluir Dieta" ,data: { confirm: 'Deseja excluir essa Dieta?' } %></h1>
     </div>
 </div>
 <div class="row ">
-    <div class="col-sm-6">
-        <h2>Peso Desejado:</h2><h2><%=  @diet.ideal_weight %></h2>
+    <div class="col-sm-5">
+        <h3>Peso:</h3><h3><%=  @diet.starting_weight %></h3>
+    </div>
+     <div class="col-sm-5">
+        <h3>Altura:</h3><h3><%=  @diet.height %></h3>
+    </div>
+</div>
+<div class="row ">
+    <div class="col-sm-5">
+        <h3>Peso Desejado:</h3><h3><%=  @diet.ideal_weight %></h3>
     </div>
 </div>
